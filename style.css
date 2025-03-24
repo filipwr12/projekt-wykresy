@@ -1,0 +1,33 @@
+body{
+    font-family: arial;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+.x-box{
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    background-color: green;
+
+    background:repeating-conic-gradient(
+        from 0deg,
+        red 0deg 25deg,
+        yellow 25deg 150deg,
+        orange 150deg 220deg,
+        blue 220deg 360deg
+    );
+}
+.x-box-cont{
+    font-size: 30px;
+    padding-left: 50px;
+}
+.x-box-cont h1{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.x-box-cont strong{
+    display: block;
+    margin-bottom: 15px;
+}
