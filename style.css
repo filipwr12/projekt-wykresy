@@ -1,33 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-    font-family: arial;
-    font-size: 16px;
+    background-color: black;
+    font-family: sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    align-items: center;
 }
-.x-box{
-    width: 30vh;
-    height: 30vh;
-    border-radius: 50%;
-    background-color: green;
+.container{
+    height: 45%;
+    width: 30%;
+    display: grid;
+    grid-template-rows: 35% 65%;
+    align-items: center;
+    justify-content: center;
+    border: .3rem solid #1a1a1a;
+    border-radius: 3rem;
+}
+h1{
+    margin-top: 3rem;
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 0 1rem;
+    border-bottom: 2px solid #1a1a1a;
+}
+.box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 .5rem;
+    width: 70%;
+    height: 8rem;
+    align-items: center;
+    color: #fff;
+    background-color: #1a1a1a;
+    position: relative;
+    border-radius: 1rem;
+    font-size: 4rem;
+    overflow: hidden;
+}
+.clock p{
+    font-size: 1rem;
+}
+#day{
+    color: white;
+}
 
-    background:repeating-conic-gradient(
-        from 0deg,
-        red 0deg 25deg,
-        yellow 25deg 150deg,
-        orange 150deg 220deg,
-        blue 220deg 360deg
-    );
-}
-.x-box-cont{
-    font-size: 30px;
-    padding-left: 50px;
-}
-.x-box-cont h1{
-    font-size: 30px;
-    text-transform: uppercase;
-}
-.x-box-cont strong{
-    display: block;
-    margin-bottom: 15px;
-}
