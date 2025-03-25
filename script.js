@@ -1,34 +1,45 @@
+// Tablica z nazwami miesięcy
 var aMonths = new Array('styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzien');
-var date    = new Date();
 
+// Inicjalizacja daty na bieżący moment
+var date = new Date();
+
+// Wywołanie funkcji do rysowania kalendarza
 Calendar();
 
-document.querySelector('#prev').addEventListener('click',PrevMonth);
-document.querySelector('#next').addEventListener('click',NextMonth);
+// Dodanie nasłuchiwaczy do przycisków
+document.querySelector('#prev').addEventListener('click', PrevMonth);
+document.querySelector('#next').addEventListener('click', NextMonth);
 
-function PrevMonth(){
-date = new Date(date.getFullYear(), date.getMonth() - 1, 1);
-Calendar();
+// Funkcja do przechodzenia do poprzedniego miesiąca
+function PrevMonth() {
+    // Ustawienie daty na poprzedni miesiąc
+    date = new Date(date.getFullYear(), date.getMonth() - 1, 1);
+    Calendar(); // Aktualizacja kalendarza
 }
 
-function NextMonth(){
-date = new Date(date.getFullYear(), date.getMonth() + 1, 1);
-Calendar();
+// Funkcja do przechodzenia do następnego miesiąca
+function NextMonth() {
+    // Ustawienie daty na następny miesiąc
+    date = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+    Calendar(); // Aktualizacja kalendarza
 }
 
-function Calendar(){
+// Funkcja rysująca kalendarz
+function Calendar() {
+    const td = document.querySelectorAll('#calendar tbody td'); // Pobranie komórek kalendarza
+    const firstDay = new Date(date.getFullYear(), date.getMonth(), 1); // Pierwszy dzień miesiąca
+    const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0); // Ostatni dzień miesiąca
+    const day = firstDay.getDay() ? firstDay.getDay() - 1 : 6; // Dzień tygodnia dla pierwszego dnia
 
-const   td       = document.querySelectorAll('#calendar tbody td');
-const   firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-const   lastDay  = new Date(date.getFullYear(), date.getMonth() + 1, 0);
-const   day      = firstDay.getDay() ? firstDay.getDay()-1 : 6;
+    // Ustawienie nagłówka kalendarza
+    document.querySelector('#calendar_top').innerHTML = aMonths[date.getMonth()] + ' ' + date.getFullYear();
 
-document.querySelector('#calendar_top').innerHTML = aMonths[date.getMonth()] + ' ' + date.getFullYear();
-
-let dzien = 1;
-for (let i = 0; i < td.length; i++) {
-     td[i].innerHTML = (i>=day && dzien<=lastDay.getDate()) ? dzien++ : '';
-     if (i>=35) td[i].style.display =  (day+dzien-1<36) ?  'none' : '';
-     }
-
+    let dzien = 1; // Inicjalizacja zmiennej do dni
+    for (let i = 0; i < td.length; i++) {
+        // Wypełnienie komórek dniami lub pustymi wartościami
+        td[i].innerHTML = (i >= day && dzien <= lastDay.getDate()) ? dzien++ : '';
+        // Ukrycie niepotrzebnych komórek
+        if (i >= 35) td[i].style.display = (day + dzien - 1 < 36) ? 'none' : '';
+    }
 }
