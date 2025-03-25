@@ -39,7 +39,19 @@ function Calendar() {
     for (let i = 0; i < td.length; i++) {
         // Wypełnienie komórek dniami lub pustymi wartościami
         td[i].innerHTML = (i >= day && dzien <= lastDay.getDate()) ? dzien++ : '';
+          //td[i].innerHTML = Ustawia zawartość HTML dla komórki td[i] w tabeli kalendarza. To oznacza, że w tej komórce wyświetli się numer dnia lub pozostanie pusta.
+          //(i >= day && dzien <= lastDay.getDate()): // i >= day: Sprawdza, czy indeks komórki i jest większy lub równy day. day to dzień tygodnia, w którym zaczyna się miesiąc (0 dla niedzieli, 1 dla poniedziałku, itd.)
+          //dzien <= lastDay.getDate(): Sprawdza, czy aktualny numer dnia (dzien) jest mniejszy lub równy liczbie dni w miesiącu (lastDay.getDate()).
+          //? dzien++ //operator warunkowy  // Jeśli warunek jest prawdziwy (true), to do komórki td[i] zostanie przypisany aktualny numer dnia (dzien), a następnie dzien zostanie zwiększony o 1 (operacja dzien++).
+          //Jeśli warunek jest fałszywy (false), to do komórki td[i] zostanie przypisany pusty ciąg (''), co oznacza, że komórka pozostanie pusta.
+
+
         // Ukrycie niepotrzebnych komórek
-        if (i >= 35) td[i].style.display = (day + dzien - 1 < 36) ? 'none' : '';
+        if (i >= 35) td[i].style.display = (day + dzien - 1 < 36) ? 'none' : ''; 
+        //if (i >= 35): Sprawdza, czy indeks i jest większy lub równy 35.
+        //td[i].style.display = ...: Ustawia styl wyświetlania dla komórki td[i]. W zależności od warunku, komórka może być ukryta lub widoczna.
+        //(day + dzien - 1 < 36) ? 'none' // operator warunkowy // day + dzien - 1 oblicza, który dzień w kalendarzu jest aktualnie wstawiany 
+        //Jeśli warunek jest prawdziwy (true), to td[i].style.display zostanie ustawione na 'none', co oznacza, że komórka będzie ukryta.
+        //Jeśli warunek jest fałszywy (false), to td[i].style.display zostanie ustawione na pusty ciąg (''), co oznacza, że komórka będzie widoczna.
     }
 }
