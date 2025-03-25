@@ -1,18 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        tbody td:hover {
+    outline: 1px solid black;
+    cursor: pointer;
+    
+
+}
+    </style>
 </head>
+
 <body>
 
     <div class="container">
-        <section class="wykres1">
+        <nav>
+            <div class="logo">
+
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="parent">
+            <div class="div1">
+
+            </div>
+            <div class="div2">
+                <main class="">
+                    <h1 class="header" id="day"></h1>
+                    <div class="box2">
+                        <div class="clock">
+                            <div class="front-clock">
+                                <div id="hour">00</div>
+                                <p>godzina</p>
+                            </div>
+                        </div>
             
-        </section>
+                        <div class="clock">
+                            <div class="front-clock">
+                                <div id="minute">00</div>
+                                <p>minuta</p>
+                            </div>
+                        </div>
+            
+                        <div class="clock">
+                            <div class="front-clock">
+                                <div id="second">00</div>
+                                <p>sekunda</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div class="div3">
+                <section class="wykres1">
+                    <h1 class="header">
+                        Ilosc uzytkownikow korzystajacych z internetu
+                    </h1>
+                    <div class="top">
+                        <div class="left-section">
+                            <ul>
+                                <li>
+                                    <p>10mld</p>
+                                </li>
+                                <li>
+                                    <p>8mld</p>
+                                </li>
+                                <li>
+                                    <p>6mld</p>
+                                </li>
+                                <li>
+                                    <p>4mld</p>
+                                </li>
+                                <li>
+                                    <p>2mld</p>
+                                </li>
+                                <li>
+                                    <p>0mld</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <div id="chart"></div>
+                            <div class="line1 line">
+                            </div>
+                            <div class="line2 line"></div>
+                            <div class="line3 line"></div>
+                            <div class="line4 line"></div>
+                            <div class="line5 line"></div>
+                            <div class="line6 line"></div>
+                        </div>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="box">
+                        </div>
+                        <div class="footer">
+                            <p>2020</p>
+                            <p>2021</p>
+                            <p>2022</p>
+                            <p>2023</p>
+                            <p>2024</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="div4">
+                <div class="kontener">
+                    <h3 class="header">Użytkownicy internetu</h3>
+                    <section class="sekcja1">
+
+                        <div class="wykres1" id="wykresKolowy"> </div>
+                        <section class="w1">
+                            <div class="row">
+                                <div class="k1"></div>
+                                <p>Zadowoleni(40%)</p>
+                            </div>
+                            <div class="row">
+                                <div class="k2"></div>
+                                <p>Niezadowoleni(30%)</p>
+                            </div>
+                            <div class="row">
+                                <div class="k3"></div>
+                                <p>Brak zdania(30%)</p>
+                            </div>
+                        </section>
+
+                    </section>
+                </div>
+
+            </div>
+            <div class="div5">
+                <section class="cal_style">
+                    <table id="calendar">
+                        <thead>
+                            <tr>
+                                <td><button id="prev">←</button></td>
+                                <td colspan="5" id="calendar_top" class="header">marzec 2025</td>
+                                <td><button id="next">→</button></td>
+                            </tr>
+                            <tr>
+                                <td>pon</td>
+                                <td>wto</td>
+                                <td>śro</td>
+                                <td>czw</td>
+                                <td>pt</td>
+                                <td>sob</td>
+                                <td>nie</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="td"></td>
+                                <td id="td"></td>
+                                <td id="td"></td>
+                                <td id="td"></td>
+                                <td id="td"></td>
+                                <td id="td">1</td>
+                                <td id="td">2</td>
+                            </tr>
+                            <tr>
+                                <td id="td">3</td>
+                                <td id="td">4</td>
+                                <td id="td">5</td>
+                                <td id="td">6</td>
+                                <td id="td">7</td>
+                                <td id="td">8</td>
+                                <td id="td">9</td>
+                            </tr>
+                            <tr>
+                                <td id="td">10</td>
+                                <td id="td">11</td>
+                                <td id="td">12</td>
+                                <td id="td">13</td>
+                                <td id="td">14</td>
+                                <td id="td">15</td>
+                                <td id="td">16</td>
+                            </tr>
+                            <tr>
+                                <td id="td">17</td>
+                                <td id="td">18</td>
+                                <td id="td">19</td>
+                                <td id="td">20</td>
+                                <td id="td">21</td>
+                                <td id="td">22</td>
+                                <td id="td">23</td>
+                            </tr>
+                            <tr>
+                                <td id="td">24</td>
+                                <td id="td">25</td>
+                                <td id="td">26</td>
+                                <td id="td">27</td>
+                                <td id="td">28</td>
+                                <td id="td">29</td>
+                                <td id="td">30</td>
+                            </tr>
+                            <tr>
+                                <td id="td">31</td>
+                                <td id="td"></td>
+                                <td id="td"></td>
+                                <td id="td"></td>
+                                <td id="td"></td>
+                                <td id="td"></td>
+                                <td id="td"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <div class="div6">
+            </div>
+        </div>
     </div>
-    
+    <script src="script.js"></script>
 </body>
+
 </html>
